@@ -3,15 +3,15 @@ using System;
 
 namespace ConsoleApp11
 {
-    internal class Program
+    internal class Program1
     {
         static void Main(string[] args)
         {
             //作业1   提取一句话中所有的中文姓名
-            //string str = "hello, I am 刘德华,your name is 黎明?";
-            //var name = @"[\u4e00-\u9fa5]{2,}";
-            //var name1 = Regex.Matches(str, name);
-            //foreach (var arg in name1) Console.WriteLine(arg);
+            string str = "hello, I am 刘德华,your name is 黎明?";
+            var name = @"[\u4e00-\u9fa5]{2,}";
+            var name1 = Regex.Matches(str, name);
+            foreach (var arg in name1) Console.WriteLine(arg);
 
             //作业2  替换所有多余空格
 
@@ -42,36 +42,36 @@ namespace ConsoleApp11
             //如果只有两种则 强度为中
             //如果两种都有则 强度为强
             //验证密码长度是否符合,并输出密码强度
-            Console.WriteLine("请输入密码：");
-           string num=Console .ReadLine();
-            if (num.Length < 8 || num.Length > 15)
-                Console.WriteLine("密码长度错误，重新输入");
-            else
-            {
-                int count = 0;
-                var reg = @"\d";
-                if (Regex.IsMatch(num, reg)) {
-                    //Console.WriteLine("密码中有数字");
-                    count++;
-                }
-                var reg1 = @"[a-zA-Z]";
-                if (Regex.IsMatch(num, reg1))
-                {
-                   // Console.WriteLine("密码中有字母");
-                    count++;
-                }
-                var reg2 = @"[^a-zA-Z0-9]";
-                if (Regex.IsMatch(num, reg2))
-                {
-                   // Console.WriteLine("密码中有特殊符号");
-                    count++;
-                }
-                if(count==1) Console.WriteLine("密码强度弱");
-                if(count==2) Console.WriteLine("密码强度中");
-                if(count==3) Console.WriteLine("密码强度强");
+            // Console.WriteLine("请输入密码：");
+            //string num=Console .ReadLine();
+            // if (num.Length < 8 || num.Length > 15)
+            //     Console.WriteLine("密码长度错误，重新输入");
+            // else
+            // {
+            //     int count = 0;
+            //     var reg = @"\d";
+            //     if (Regex.IsMatch(num, reg)) {
+            //         //Console.WriteLine("密码中有数字");
+            //         count++;
+            //     }
+            //     var reg1 = @"[a-zA-Z]";
+            //     if (Regex.IsMatch(num, reg1))
+            //     {
+            //        // Console.WriteLine("密码中有字母");
+            //         count++;
+            //     }
+            //     var reg2 = @"[^a-zA-Z0-9]";
+            //     if (Regex.IsMatch(num, reg2))
+            //     {
+            //        // Console.WriteLine("密码中有特殊符号");
+            //         count++;
+            //     }
+            //     if(count==1) Console.WriteLine("密码强度弱");
+            //     if(count==2) Console.WriteLine("密码强度中");
+            //     if(count==3) Console.WriteLine("密码强度强");
 
 
-            }
+            // }
 
 
         }
